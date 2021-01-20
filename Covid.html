@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>FestMakers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="imagens/festmakerslogontext.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/fontAwesome.css">
+    <link rel="stylesheet" href="css/hero-slider.css">
+    <link rel="stylesheet" href="css/owl-carousel.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link href="css/global.css" rel="stylesheet" />
+
+    <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css'>
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Spectral:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <style>
+
+        .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+            background-color: transparent;
+        }
+
+        .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+            background-color: transparent;
+        }
+
+        .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .active > a {
+            background-image: none;
+            background-color: transparent;
+        }
+
+        body {
+            font-family: 'Spectral', serif !important;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            transition: background 0.5s ease;
+        }
+
+        .container1:hover .overlay {
+            display: block;
+            background: rgba(0, 0, 0, .3);
+        }
+
+        img {
+            position: absolute;
+            width: 500px;
+            height: 300px;
+            left: 0;
+        }
+
+
+        .button {
+            position: absolute;
+            width: 500px;
+            left: 0;
+            top: 180px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity .35s ease;
+        }
+
+            .button a {
+                width: 200px;
+                padding: 12px 48px;
+                text-align: center;
+                color: white;
+                border: solid 2px white;
+                z-index: 1;
+            }
+
+
+        body {
+            font-family: 'Spectral', serif !important;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            transition: background 0.5s ease;
+        }
+
+
+        body {
+            font-family: 'Spectral', serif !important;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            transition: background 0.5s ease;
+        }
+
+
+        .whitebox {
+            background-color: #f4f0e5;
+            padding: 40px;
+            border-radius: 3px;
+            position: absolute;
+            top: 50%;
+            left: 26.5%;
+        }
+
+        li {
+            display: block;
+            transition-duration: 0.5s;
+        }
+
+            li:hover {
+                cursor: pointer;
+            }
+
+        ul li ul {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            transition: all 0.5s ease;
+            margin-top: 1rem;
+            left: 0;
+            display: none;
+        }
+
+            ul li:hover > ul,
+            ul li ul:hover {
+                visibility: visible;
+                opacity: 1;
+                display: block;
+            }
+
+            ul li ul li {
+                clear: both;
+                width: 100%;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <a href="#" class="navbar-brand scroll-top">FestMakers</a>
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!--/.navbar-header-->
+                <div id="main-nav" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Covid.html">COVID-19</a></li>
+                        <li>
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="">Menus <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="mediterranea.html">Ementa Mediterrânea</a></li>
+                                <li><a href="marisco.html">Ementa Marisco</a></li>
+                                <li><a href="transmontana.html">Ementa Transmonstana</a></li>
+                                <li><a href="casamento.html">Ementa de Casamento</a></li>
+                                <li><a href="coffeebrake.html">Ementa Coffee Break</a></li>
+                                <!--- Put your menu-item here -->
+                            </ul>
+                        </li>
+                        <li><a href="contact.html">Contactos</a></li>
+                        <li><a href="about.html">Sobre nós</a></li>
+                        <li><a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a></li>
+                    </ul>
+                </div>
+                <!--/.navbar-collapse-->
+            </nav>
+            <!--/.navbar-->
+        </div>
+        <!--/.container-->
+    </div>
+    <!--/.header-->
+    <!-- The Modal -->
+
+    <div class="container-fluid">
+        <div id="id01" class="modal">
+
+            <form class="modal-content animate" action="locationcheck.html">
+                <div class="imgcontainer" style="margin-bottom:40px">
+                    <h2>Login</h2>
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+
+
+                <div class="col" style="margin-bottom:30px">
+                    <a href="#" class="fb btn">
+                        <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+                    </a>
+                    <br />
+                    <br />
+                    <a href="#" class="google btn">
+                        <i class="fa fa-google fa-fw"></i> Login with Google
+                    </a>
+                </div>
+
+                <div style="margin-left:70px; margin-bottom:30px">
+                    <label for="uname" style="margin-right:25px"><b>Email:</b></label>
+                    <input type="text" placeholder="Insira o seu email..." name="uname" required>
+                    <br />
+                    <label for="psw" style="margin-right:5px"><b>Password:</b></label>
+                    <input type="password" placeholder="Insira a sua palavra-passe..." name="psw" required>
+                    <br />
+                    <br />
+                    <div>
+                        <button type="submit" style="display: inline-block; background-color: #a9957b; color: #fff; font-size: 13px; text-transform: uppercase;
+          font-weight: 500; padding: 12px 20px; border-radius: 3px; text-decoration: none; letter-spacing: 0.5px; width:25%; margin-left:27%">
+                            Login
+                        </button>
+                    </div>
+
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- end of login-->
+
+    <div class="container" style=" background-image: url('imagens/catering.jpg'); min-height:750px; min-width:1900px">
+        <div class="whitebox">
+            <h1 style="text-align:center; "><b>Combatemos a pandemia juntos</b></h1>
+            <br>
+            <h4 style="text-align:center; ">Durante todos os nossos serviços são seguidas as normas de HACCP e da DGS para garantir máxima <br />segurança e assegurar um serviço de confiança.</h4>
+        </div>
+    </div>
+
+
+
+
+    <footer style="background-color: #a9957b;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Copyright &copy; 2021 FestMakers</p>
+                </div>
+
+                <div class="col-md-8" style="text-align:right">
+                    <p>Projeto MAS 2021 G301</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

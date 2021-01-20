@@ -1,0 +1,838 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>FestMakers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="imagens/festmakerslogontext.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/fontAwesome.css">
+    <link rel="stylesheet" href="css/hero-slider.css">
+    <link rel="stylesheet" href="css/owl-carousel.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link href="css/global.css" rel="stylesheet" />
+    <link href="css/cart.css" rel="stylesheet" />
+    <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css'>
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Spectral:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <style>
+
+
+        .container{
+            width:100% !important;
+
+
+
+        }
+
+        .topleft {
+            top: 7%;
+            left: 18%;
+        }
+
+        .topright {
+            top: 7%;
+            left: 60%;
+        }
+
+        .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+            background-color: transparent;
+        }
+
+        .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+            background-color: transparent;
+        }
+
+        .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .active > a {
+            background-image: none;
+            background-color: transparent;
+        }
+
+        body {
+            font-family: 'Spectral', serif !important;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            transition: background 0.5s ease;
+        }
+
+        .container1:hover .overlay {
+            display: block;
+            background: rgba(0, 0, 0, .3);
+        }
+
+        img {
+            position: absolute;
+            width: 500px;
+            height: 300px;
+            left: 0;
+        }
+
+
+        .button {
+            position: absolute;
+            width: 500px;
+            left: 0;
+            top: 180px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity .35s ease;
+        }
+
+            .button a {
+                width: 200px;
+                padding: 12px 48px;
+                text-align: center;
+                color: white;
+                border: solid 2px white;
+                z-index: 1;
+            }
+
+        .container1:hover .button {
+            opacity: 1;
+        }
+
+        li {
+            display: block;
+            transition-duration: 0.5s;
+        }
+
+            li:hover {
+                cursor: pointer;
+            }
+
+        ul li ul {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            transition: all 0.5s ease;
+            margin-top: 1rem;
+            left: 0;
+            display: none;
+        }
+
+            ul li:hover > ul,
+            ul li ul:hover {
+                visibility: visible;
+                opacity: 1;
+                display: block;
+            }
+
+            ul li ul li {
+                clear: both;
+                width: 100%;
+            }
+
+        body {
+            margin-bottom: 60px;
+            font-family: 'Khand', sans-serif;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            background-color: #f5f5f5;
+        }
+
+        footer p {
+            margin: 20px 0;
+        }
+
+        .footer > .container {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        /* -- -- */
+        h3 {
+            display: inline-block;
+            font-size: 32px;
+            line-height: 36px;
+            position: relative;
+            margin-top: 28px;
+            margin-bottom: 15px;
+        }
+
+            h3:before {
+                left: -40px;
+                height: 0;
+                height: 1px;
+            }
+
+            h3:before, h3:after {
+                content: "";
+                position: absolute;
+                bottom: 18px;
+                height: 1px;
+                width: 40px;
+                margin: 0 -15px;
+                background-color: #533834;
+            }
+
+            h3:after {
+                right: -40px;
+            }
+
+        h5 {
+            font-size: 16px;
+            line-height: 22px;
+            margin: 0 0 15px;
+            font-weight: 400;
+        }
+
+        .item {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+            .item h4, .item p {
+                display: block;
+                clear: both;
+                color: #533834;
+            }
+
+            .item p {
+                clear: both;
+                color: #938372;
+                margin-left: 5px;
+            }
+
+            .item span:first-of-type {
+                background-image: linear-gradient(to right,rgba(56,47,47,.5) 33%,rgba(0,0,0,0) 0%);
+                background-position: bottom;
+                background-size: 3px 1px;
+                background-repeat: repeat-x;
+                height: 1px;
+                width: 100%;
+                position: absolute;
+                top: 22px;
+            }
+        /* Dots in IE */
+        @media screen and (-ms-high-contrast:active), (-ms-high-contrast:none) {
+            .dots {
+                background: transparent url('/img/dot.gif') repeat-x bottom left;
+            }
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0 10px;
+            background: #d2c82a;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 26px;
+            color: #fff;
+            text-align: center;
+            vertical-align: middle;
+            text-transform: uppercase;
+            border: 1px solid rgba(0,0,0,.05);
+            letter-spacing: 1px;
+            border-radius: 3px;
+            margin: -2px 5px 0 0;
+        }
+
+        .note {
+            padding: 0 5px 0 7px;
+            min-width: 23px;
+            background: rgba(0,0,0,0);
+            border: 1px solid #382f2f;
+            color: #382f2f;
+            box-sizing: border-box;
+            border-radius: 12px;
+            line-height: 21px;
+        }
+
+        .veggie {
+            color: #82b440;
+            border-color: #82b440;
+        }
+
+        .spicy {
+            color: #ec4e00;
+            border-color: #ec4e00;
+        }
+
+        .item span:nth-of-type(2n) {
+            position: absolute;
+            font-size: 22px;
+            font-weight: 400;
+            right: 0;
+            padding-left: 8px;
+            background-color: #fff;
+            z-index: 0;
+        }
+
+        .item h4 {
+            display: inline-block;
+            padding-right: 8px;
+            font-size: 1.25rem;
+            max-width: 80%;
+            text-transform: capitalize;
+            margin-bottom: 4px;
+            position: relative;
+        }
+
+        li {
+            display: block;
+            transition-duration: 0.5s;
+        }
+
+            li:hover {
+                cursor: pointer;
+            }
+
+        ul li ul {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            transition: all 0.5s ease;
+            margin-top: 1rem;
+            left: 0;
+            display: none;
+        }
+
+            ul li:hover > ul,
+            ul li ul:hover {
+                visibility: visible;
+                opacity: 1;
+                display: block;
+            }
+
+            ul li ul li {
+                clear: both;
+                width: 100%;
+            }
+
+        .button-comprar a {
+            display: inline-block;
+            background-color: #a9957b;
+            color: #fff;
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: 500;
+            padding: 12px 20px;
+            border-radius: 3px;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <a   class="navbar-brand scroll-top">FestMakers</a>
+            <div class="row" style="margin-bottom:5px">
+                <ul class="nav navbar-nav topleft" style="position:absolute">
+                    <li><a href="User Ementas.html">Ementas</a></li>
+                    <li><a href="User AsuaEmenta.html">A sua Ementa</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav topright" style="position:absolute">
+                    <li><a href="User O seu Evento.html">O seu evento</a></li>
+                    <li><a>Bem vindo Demo!</a></li>
+                </ul>
+            </div>
+
+
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!--/.navbar-header-->
+                <div id="main-nav" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="UserIndex.html">Home</a></li>
+                        <li><a href="UserCOVID.html">COVID-19</a></li>
+                        <li>
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="">Menus <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="Usermediterranea.html">Ementa Mediterrânea</a></li>
+                                <li><a href="Usermarisco.html">Ementa Marisco</a></li>
+                                <li><a href="Usertransmontana.html">Ementa Transmonstana</a></li>
+                                <li><a href="Usercasamento.html">Ementa de Casamento</a></li>
+                                <li><a href="Usercoffeebrake.html">Ementa Coffee Break</a></li>
+                                <!--- Put your menu-item here -->
+                            </ul>
+                        </li>
+                        <li><a href="UserContactos.html">Contactos</a></li>
+                        <li><a href="UserAbout.html">Sobre nós</a></li>
+                    </ul>
+                </div>
+                <!--/.navbar-collapse-->
+            </nav>
+            <!--/.navbar-->
+        </div>
+        <!--/.container-->
+    </div>
+    <!--/.header-->
+
+
+    <div class="row" style="padding:20px; position:relative; top:30%;left:42%;">
+        <h1 class="my-3">A sua Ementa</h1>
+        <div class="primary-button" style="margin-left:15px">
+            <a href="User Carrinho de compras.html" class="cart" data-id="book-table"><i class="fa fa-shopping-cart" aria-hidden="true"></i> A sua Escolha ( <span></span> )</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center">
+                    <a id="4"></a><h3 style="margin-bottom:50px">ENTRADAS</h3>
+                </div>
+            </div>
+        </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="item">
+                                <h4>Bruschetta de tomate</h4>
+                                <span></span>
+
+                                <span class="button-comprar">
+                                    <a   class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>6.00€</span>
+                                <p>Pão coberto com tomate e mozarella.</p>
+
+                            </div>
+                            <div class="item">
+                                <h4>Bruschetta de azeitona</h4>
+                                <div class="note badge veggie" data-toggle="tooltip" data-placement="right" title="Vegetarian">V</div>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a   class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>6.00€</span>
+
+                                <p>Pão coberto com pasta de azeitona.</p>
+                            </div>
+                            <div class="item">
+                                <h4>Carpaccio</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a   class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>5.00€</span>
+                                <p>Lombo de boi, frutos secos e óleo de trufa </p>
+                            </div>
+                            <div class="item">
+                                <h4>Húmos de beterraba</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a   class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>5.00€</span>
+                                <p>Pasta de grão, beterraba e vinagre balsâmico.</p>
+                            </div>
+                            <div class="item">
+                                <h4>Gazpacho</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a   class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>4.00€</span>
+                                <p>Sopa fria de tomate.</p>
+                            </div>
+                            <div class="item">
+                                <h4>Creme de lentilhas com abóbora</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a   class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>4.00€</span>
+                                <p>Sopa de abóbora, cenoura e lentilhas.</p>
+                            </div>
+                            <div class="item">
+                                <h4>Chouriço Transmontano na brasa</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a   class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>6.00€</span>
+                                <p>Chouriço assado na brasa.</p>
+                            </div>
+                            <div class="item">
+                                <h4>Alheira Transmontana</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a   class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>6.00€</span>
+                                <p>Alheira grelhada transmontana.</p>
+                            </div>
+
+                        </div>
+                        
+
+                        <div class="col-sm-6">
+
+                            <div class="item">
+                                <h4>Pasta de Rúcula com Presunto</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a   class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>4.00€</span>
+                                <p></p>
+                            </div>
+                            <div class="item">
+                                <h4>Tâmaras com Bacon</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a   class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>4.00€</span>
+                                <p></p>
+                            </div>
+                            <div class="item">
+                                <h4>Cogumelos frescos recheados</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a   class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>6.00€</span>
+                                <p></p>
+                            </div>
+                            <div class="item">
+                                <h4>Rissóis de Camarão</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a   class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>3.00€</span>
+                                <p></p>
+                            </div>
+                            <div class="item">
+                                <h4> Rissóis de Carne</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a   class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>3.00€</span>
+                                <p></p>
+                            </div>
+                            <div class="item">
+                                <h4> Pastéis de Nata de Bacalhau</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a   class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>4.00€</span>
+                                <p></p>
+                            </div>
+                            <div class="item">
+                                <h4>Tomate Cherry com azeite e Orégãos</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a   class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>3.00€</span>
+                                <p></p>
+                            </div>
+                            <div class="item">
+                                <h4>Sopa mediterrânea</h4>
+                                <div class="note badge spicy" data-toggle="tooltip" data-placement="right" title="Spicy">s</div>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a   class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>4.00€</span>
+                                <p>Sopa de galinha picante.</p>
+                                <p></p>
+                            </div>
+                            <div class="item">
+                                <h4>Rolinhos de Salmão com Queijo Fresco</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a   class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>6.00€</span>
+                                <p></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <a id="7"></a><h3 style=" margin-bottom:50px; margin-top:60px">PRATOS PRINCIPAIS</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="item">
+                                <h4>Aglio olio</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a   class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>20.00€</span>
+                                <p><i>Spaguetti com alho e azeite.</i></p>
+                            </div>
+                            <div class="item">
+                                <h4>Risotto de couve-portuguesa</h4>
+                                <div class="note badge veggie" data-toggle="tooltip" data-placement="right" title="Vegetarian">V</div>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a   class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>16.00€</span>
+                                <p><i>Risotto com couve, abóbora e açafrão.</i></p>
+                            </div>
+                            <div class="item">
+                                <h4>Tagliatelle com frango e tomate</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a   class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>18.00€</span>
+                                <p>Massa com frango, tomate e oregãos.</p>
+                            </div>
+                            <div class="item">
+                                <h4>Corvina assada com legumes</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a   class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>22.00€</span>
+                                <p>Peixe assado com legumes.</p>
+                            </div>
+                            <div class="item">
+                                <h4>Salmão com crumble de amêndoas</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a   class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>17.00€</span>
+                                <p>Salmão grelhado com crosta de frutos secos</p>
+                            </div>
+                            <div class="item">
+                                <h4>Bacalhau assado na brasa</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a   class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>17.00€</span>
+                                <p>Bacalhau assado com batata cozida.</p>
+                            </div>
+                            <div class="item">
+                                <h4>Muffins de ovo e legumes</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a   class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>14.00€</span>
+                                <p>Muffins recheados c/ ovo e pasta de legumes.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-6">
+                         
+                            <div class="item">
+                                <h4>Salada de grão de bico e bacalhau</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a   class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>15.00€</span>
+                                <p>Salada de grão de bico, bacalhau e legumes.</p>
+                            </div>
+                            <div class="item">
+                                <h4>Tosta de atum</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a   class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>13.00€</span>
+                                <p>Tostas com pasta de atum com queijo.</p>
+                            </div>
+                            <div class="item">
+                                <h4>Arroz de tamboril</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a  class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>17.00€</span>
+                                <p>Arroz com tomate e camarão.</p>
+                            </div>
+                            <div class="item">
+                                <h4>Costeletão de Novilho na grelha</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a  class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>17.00€</span>
+                                <p>Costeletão de Novilho com arroz.</p>
+                            </div>
+                            <div class="item">
+                                <h4>Filetes de pescada</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a  class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>17.00€</span>
+                                <p>Filetes de pescada com arroz e legumes.</p>
+                            </div>
+                            <div class="item">
+                                <h4>Alheira assada</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>17.00€</span>
+                                <p>Alheira assada com arroz.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <a id="9"></a><h3 style=" margin-bottom:50px; margin-top:60px">SOBREMESAS</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="item">
+                                <h4>Sorvete de nozes borges</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>7.00€</span>
+                                <p></p>
+                            </div>
+                            <div class="item">
+                                <h4>Waffles com gelado de baunilha</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>6.00€</span>
+                                <p></p>
+                            </div>
+                            <div class="item">
+                                <h4>Bolo de cenoura</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>5.00€</span>
+                                <p></p>
+                            </div>
+                            <div class="item">
+                                <h4>Salada de fruta</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>4.00€</span>
+                                <p></p>
+                            </div>
+
+                            <div class="item">
+                                <h4>Chouriço de Mel e Amêndoa</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>7.00€</span>
+                                <p></p>
+                            </div>
+
+
+                        </div>
+                        <div class="col-sm-6" style="margin-bottom:100px">
+                            <div class="item">
+                                <h4>Tiramisu de copo</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>6.00€</span>
+                                <p></p>
+                            </div>
+                            
+                            <div class="item">
+                                <h4>Mousse de Chocolate</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>5.00€</span>
+                                <p></p>
+                            </div>
+                            <div class="item">
+                                <h4>Brownie de chocolate com gelado</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>7.00€</span>
+                                <p></p>
+                            </div>
+                            <div class="item">
+                                <h4>Tarte de frutas tropicais com gelado</h4>
+                                <span></span>
+                                <span class="button-comprar">
+                                    <a class="add-cart cart1" value="6.00">Comprar</a>
+                                </span>
+                                <span>6.00€</span>
+                                <p></p>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+     
+
+    <footer style="background-color: #a9957b;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Copyright &copy; 2021 FestMakers</p>
+                </div>
+
+                <div class="col-md-8" style="text-align:right">
+                    <p>Projeto MAS 2021 G301</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    <script src="Carrinho.js"></script>
+
+</body>
+</html>

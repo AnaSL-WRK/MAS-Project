@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>FestMakers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="imagens/festmakerslogontext.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/fontAwesome.css">
+    <link rel="stylesheet" href="css/hero-slider.css">
+    <link rel="stylesheet" href="css/owl-carousel.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link href="css/global.css" rel="stylesheet" />
+
+    <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css'>
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Spectral:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <style>
+        .container {
+            width: 50%;
+            max-width: 800px;
+        }
+
+        #map {
+            height: 50vh;
+            margin-bottom: 10px;
+            display: none;
+        }
+
+        #locationList .card {
+            padding: 10px;
+        }
+
+        #toast-container {
+            top: 50%;
+            bottom: unset;
+        }
+
+        .toast {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        @media only screen and (max-width: 768px) {
+            .container {
+                width: 80%;
+            }
+        }
+        .disabled {
+            pointer-events: none;
+            opacity:0.5;
+       
+        }
+        .topleft {
+            top: 68px;
+            left: 450px;
+        }
+
+        .topright {
+            top: 68px;
+            left: 1150px
+        }
+
+        .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+            background-color: transparent;
+        }
+
+        .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+            background-color: transparent;
+        }
+
+        .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .active > a {
+            background-image: none;
+            background-color: transparent;
+        }
+
+        body {
+            font-family: 'Spectral', serif !important;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            transition: background 0.5s ease;
+        }
+
+        .container1:hover .overlay {
+            display: block;
+            background: rgba(0, 0, 0, .3);
+        }
+
+        img {
+            position: absolute;
+            width: 500px;
+            height: 300px;
+            left: 0;
+        }
+
+
+        .button {
+            position: absolute;
+            width: 500px;
+            left: 0;
+            top: 180px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity .35s ease;
+        }
+
+            .button a {
+                width: 200px;
+                padding: 12px 48px;
+                text-align: center;
+                color: white;
+                border: solid 2px white;
+                z-index: 1;
+            }
+
+        .container1:hover .button {
+            opacity: 1;
+        }
+
+        li {
+            display: block;
+            transition-duration: 0.5s;
+        }
+
+            li:hover {
+                cursor: pointer;
+            }
+
+        ul li ul {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            transition: all 0.5s ease;
+            margin-top: 1rem;
+            left: 0;
+            display: none;
+        }
+
+            ul li:hover > ul,
+            ul li ul:hover {
+                visibility: visible;
+                opacity: 1;
+                display: block;
+            }
+
+            ul li ul li {
+                clear: both;
+                width: 100%;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <a href="#" class="navbar-brand scroll-top">FestMakers</a>
+            <div class="row" style="margin-bottom:5px">
+                <ul class="nav navbar-nav topleft" style="position:absolute">
+                    <li><a href="User Ementas.html" class="disabled">Ementas</a></li>
+                    <li><a href="User AsuaEmenta.html" class="disabled">A sua Ementa</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav topright" style="position:absolute">
+                    <li><a href="User O seu Evento.html" class="disabled">O seu evento</a></li>
+                    <li><a>Bem vindo Demo!</a></li>
+                </ul>
+            </div>
+
+
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!--/.navbar-header-->
+                <div id="main-nav" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="UserIndex.html">Home</a></li>
+                        <li><a href="UserCOVID.html">COVID-19</a></li>
+                        <li>
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="">Menus <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="Usermediterranea.html">Ementa Mediterrânea</a></li>
+                                <li><a href="Usermarisco.html">Ementa Marisco</a></li>
+                                <li><a href="Usertransmontana.html">Ementa Transmonstana</a></li>
+                                <li><a href="Usercasamento.html">Ementa de Casamento</a></li>
+                                <li><a href="Usercoffeebrake.html">Ementa Coffee Break</a></li>
+                                <!--- Put your menu-item here -->
+                            </ul>
+                        </li>
+                        <li><a href="UserContactos.html">Contactos</a></li>
+                        <li><a href="UserAbout.html">Sobre nós</a></li>
+                    </ul>
+                </div>
+                <!--/.navbar-collapse-->
+            </nav>
+            <!--/.navbar-->
+        </div>
+        <!--/.container-->
+    </div>
+    <!--/.header-->
+
+    <section class="page-heading">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Local do evento</h1>
+                    <p> De modo a verificarmos se o seu evento se encontra na nossa área de serviço, indique-nos o seu endereço.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container" style="background-color:#f6f1e3; margin-top:50px; margin-bottom:50px">
+        
+            <form id="billingAddress" style="margin-left:70px">
+                
+                    <div id="locationList"></div>
+                    <br>
+                    <div class="input-field">
+                        <label class="active" for="address" required style="margin-right:86px">Rua:</label>
+                        <input class="materialize-textarea" id="address" type="text" />
+                    </div>
+
+                    <div class="input-field">
+                        <label class="active" for="city" required style="margin-right:65px">Cidade:</label>
+                        <input id="city" type="text">
+                    </div>
+                    <div class="input-field">
+                        <label class="active" for="city" required style="margin-right:58px">Distrito:</label>
+                        <input id="city" type="text">
+                    </div>
+
+                    <div class="input-field">
+                        <label class="active" for="pin_code" required style="margin-right:20px">Código Postal:</label>
+                        <input id="postal_code" type="text">
+                    </div>
+                
+                    <div class="container">
+                        <div class="primary-button">
+                            <a href="User O seu Evento.html" class="scroll-link" data-id="book-table" onclick="alert('Serviço disponível para a sua área!')">Verificar localização</a>
+                        </div>
+                    </div>
+            </form>
+    </div>
+
+
+
+    <footer style="background-color: #a9957b;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Copyright &copy; 2021 FestMakers</p>
+                </div>
+
+                <div class="col-md-8" style="text-align:right">
+                    <p>Projeto MAS 2021 G301</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqmiTK-pWYoYzidNYjmTQ9gSN35Umg3Xk"></script>
+    <script src="js/main.js"></script>
+    
+
+</body>
+</html>

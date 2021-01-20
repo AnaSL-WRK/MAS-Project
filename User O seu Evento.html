@@ -1,0 +1,535 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>FestMakers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="imagens/festmakerslogontext.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link href="css/global.css" rel="stylesheet" />
+
+    <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css'>
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Spectral:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
+    <style>
+
+        .card {
+            border: none
+        }
+
+        .card-header {
+            padding: .5rem 1rem;
+            margin-bottom: 0;
+            background-color: rgba(0, 0, 0, .03);
+            border-bottom: none
+        }
+
+        .btn-light:focus {
+            color: #212529;
+            background-color: #e2e6ea;
+            border-color: #dae0e5;
+            box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, .5)
+        }
+
+        .form-control {
+            height: 50px;
+            border: 2px solid #eee;
+            border-radius: 6px;
+            font-size: 14px
+        }
+
+            .form-control:focus {
+                color: #495057;
+                background-color: #fff;
+                border-color: #039be5;
+                outline: 0;
+                box-shadow: none
+            }
+
+        .input {
+            position: relative
+        }
+
+            .input i {
+                position: absolute;
+                top: 16px;
+                left: 11px;
+                color: #989898
+            }
+
+            .input input {
+                text-indent: 25px
+            }
+
+        .card-text {
+            font-size: 13px;
+            margin-left: 6px
+        }
+
+        .certificate-text {
+            font-size: 12px
+        }
+
+        .billing {
+            font-size: 11px
+        }
+
+        .super-price {
+            top: 0px;
+            font-size: 22px
+        }
+
+        .super-month {
+            font-size: 11px
+        }
+
+        .line {
+            color: #bfbdbd
+        }
+
+        .free-button {
+            background: #1565c0;
+            height: 52px;
+            font-size: 15px;
+            border-radius: 8px
+        }
+
+        .payment-card-body {
+            flex: 1 1 auto;
+            padding: 24px 1rem !important
+        }
+
+
+        .topleft {
+            top: 7%;
+            left: 18%;
+        }
+
+        .topright {
+            top: 7%;
+            left: 60%;
+        }
+
+        .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+            background-color: transparent;
+        }
+
+        .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+            background-color: transparent;
+        }
+
+        .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .active > a {
+            background-image: none;
+            background-color: transparent;
+        }
+
+        body {
+            font-family: 'Spectral', serif !important;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            transition: background 0.5s ease;
+        }
+
+
+        .button {
+            position: absolute;
+            width: 500px;
+            left: 0;
+            top: 180px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity .35s ease;
+        }
+
+            .button a {
+                width: 200px;
+                padding: 12px 48px;
+                text-align: center;
+                color: white;
+                border: solid 2px white;
+                z-index: 1;
+            }
+
+
+        body {
+            font-family: 'Spectral', serif !important;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            transition: background 0.5s ease;
+        }
+
+
+        body {
+            font-family: 'Spectral', serif !important;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            transition: background 0.5s ease;
+        }
+
+
+
+
+        .button {
+            position: absolute;
+            width: 500px;
+            left: 0;
+            top: 180px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity .35s ease;
+        }
+
+            .button a {
+                width: 200px;
+                padding: 12px 48px;
+                text-align: center;
+                color: white;
+                border: solid 2px white;
+                z-index: 1;
+            }
+
+        .container1:hover .button {
+            opacity: 1;
+        }
+
+        li {
+            display: block;
+            transition-duration: 0.5s;
+        }
+
+            li:hover {
+                cursor: pointer;
+            }
+
+        ul li ul {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            transition: all 0.5s ease;
+            margin-top: 1rem;
+            left: 0;
+            display: none;
+        }
+
+            ul li:hover > ul,
+            ul li ul:hover {
+                visibility: visible;
+                opacity: 1;
+                display: block;
+            }
+
+            ul li ul li {
+                clear: both;
+                width: 100%;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <a href="#" class="navbar-brand scroll-top">FestMakers</a>
+            <div class="row" style="margin-bottom:5px">
+                <ul class="nav navbar-nav topleft" style="position:absolute">
+                    <li><a href="User Ementas.html">Ementas</a></li>
+                    <li><a href="User AsuaEmenta.html">A sua Ementa</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav topright" style="position:absolute">
+                    <li><a href="User O seu Evento.html">O seu evento</a></li>
+                    <li><a>Bem vindo Demo!</a></li>
+                </ul>
+            </div>
+
+
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!--/.navbar-header-->
+                <div id="main-nav" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="UserIndex.html">Home</a></li>
+                        <li><a href="UserCOVID.html">COVID-19</a></li>
+                        <li>
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="">Menus <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="Usermediterranea.html">Ementa Mediterrânea</a></li>
+                                <li><a href="Usermarisco.html">Ementa Marisco</a></li>
+                                <li><a href="Usertransmontana.html">Ementa Transmonstana</a></li>
+                                <li><a href="Usercasamento.html">Ementa de Casamento</a></li>
+                                <li><a href="Usercoffeebrake.html">Ementa Coffee Break</a></li>
+                                <!--- Put your menu-item here -->
+                            </ul>
+                        </li>
+                        <li><a href="UserContactos.html">Contactos</a></li>
+                        <li><a href="UserAbout.html">Sobre nós</a></li>
+                    </ul>
+                </div>
+                <!--/.navbar-collapse-->
+            </nav>
+            <!--/.navbar-->
+        </div>
+        <!--/.container-->
+    </div>
+    <!--/.header-->
+
+    <section class="page-heading">
+        <div class="container" style="height:50px">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>O seu evento</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="container">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-horizontal">
+                    <img style="margin:50px; height:500px;" src="imagens/sobrenos.png" />
+                </div>
+            </div>
+        </div>
+
+
+        <div class="contact-us" style="position:relative; left:20%;top:50%; margin-top:100px">
+            <div class="container">
+
+                <div class="col-md-offset-1">
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <fieldset>
+                                Data:
+                                <p><input type="text" id="datepicker" style="margin-left:30px"></p>
+                            </fieldset>
+                            <fieldset>
+
+                                A sua ementa escolhida: <br />
+                                <input disabled style="margin-left:30px; margin-top:10px; width:50%; border:lightgrey 1px solid" placeholder="">
+                            </fieldset>
+                            <fieldset>
+                                Número de pessoas: <br />
+                                <input name="phone" type="text" placeholder="Número de pessoas no evento" required style="margin-left:30px; margin-top:10px;">
+                            </fieldset>
+                            <fieldset>
+                                Número: <br />
+                                <input name="phone" type="text" placeholder="O seu número..." required style="margin-left:30px; margin-top:10px;">
+                            </fieldset>
+
+                            <fieldset>
+                                <button type="submit" class="btn" style="margin-left:-35px;margin-top:100px"
+                                        onclick="document.getElementById('id07').style.display='block'">
+                                    Pagar
+                                </button>
+                            </fieldset>
+                            <fieldset>Total estimado: 250€</fieldset>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <footer style="background-color: #a9957b;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Copyright &copy; 2021 FestMakers</p>
+                </div>
+
+                <div class="col-md-8" style="text-align:right">
+                    <p>Projeto MAS 2021 G301</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="container-fluid">
+        <div id="id07" class="modal">
+
+            <div class="modal-content animate" action="locationcheck.html">
+                <div class="imgcontainer" style="margin-bottom:40px">
+                    <h2>Login</h2>
+                    <span onclick="document.getElementById('id07').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+
+
+                <div class="container d-flex justify-content-center mt-5 mb-5">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <span>Métodos de pagamento</span>
+                            <div class="card" style="width:90%; height:80%">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="card">
+                                        <div class="card-header p-0" id="headingTwo">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-light btn-block text-left collapsed p-3 rounded-0 border-bottom-custom" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    <div class="d-flex align-items-center justify-content-between"> <span>Paypal</span> <img src="https://i.imgur.com/7kQEsHU.png" width="30"> </div>
+                                                </button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <input type="text" class="form-control" placeholder="Paypal email">
+                                                <button class="btn btn-primary btn-block free-button" onclick="alert('Pagamento bem sucedido! Por favor aguarde o nosso contacto.', window.location.href='UserIndex.html')">Confirmar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="height:50%">
+                                        <div class="card-header p-0">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-light btn-block text-left p-3 rounded-0" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <span>Credit card</span>
+                                                        <div class="icons"> <img src="https://i.imgur.com/2ISgYja.png" width="30"> <img src="https://i.imgur.com/W1vtnOV.png" width="30"> <img src="https://i.imgur.com/35tC99g.png" width="30"> <img src="https://i.imgur.com/2ISgYja.png" width="30"> </div>
+                                                    </div>
+                                                </button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body payment-card-body">
+                                                <span class="font-weight-normal card-text">Número de cartão</span>
+                                                <div class="input"> <i class="fa fa-credit-card"></i> <input type="text" class="form-control" placeholder="0000 0000 0000 0000"> </div>
+                                                <div class="row mt-3 mb-3">
+                                                    <div class="col-md-6">
+                                                        <span class="font-weight-normal card-text">Data de Validade</span>
+                                                        <div class="input"> <i class="fa fa-calendar"></i> <input type="text" class="form-control" placeholder="MM/YY"> </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <span class="font-weight-normal card-text">CVC/CVV</span>
+                                                        <div class="input"> <i class="fa fa-lock"></i> <input type="text" class="form-control" placeholder="000" maxlength="16"> </div>
+                                                    </div>
+                                                </div>
+                                                <div class="p-3" style="margin:20px; margin-left:-10px">
+                                                    <button class="btn btn-primary btn-block free-button" onclick="alert('Pagamento bem sucedido! Por favor aguarde o nosso contacto.', window.location.href='UserIndex.html')">Pagar</button>
+                                                </div><span class="text-muted certificate-text"><i class="fa fa-lock"></i> A sua transação é segura com certificado sll</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header p-0" id="headingThree">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-light btn-block text-left collapsed p-3 rounded-0 border-bottom-custom" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    <div class="d-flex align-items-center justify-content-between"> <span>Multibanco</span> <img src="imagens/multibanco.png" width="30"> </div>
+                                                </button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <h4>As informações de pagamento irão ser direcionadas para o email desta conta.</h4>
+                                                <button class="btn btn-primary btn-block free-button" onclick="alert('Pagamento bem sucedido! Por favor aguarde o nosso contacto.', window.location.href='UserIndex.html')">Confirmar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    
+
+
+
+
+
+
+                <script src="js/vendor/bootstrap.min.js"></script>
+
+                <script src="js/plugins.js"></script>
+                <script src="js/main.js"></script>
+
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        // navigation click actions
+                        $('.scroll-link').on('click', function (event) {
+                            event.preventDefault();
+                            var sectionID = $(this).attr("data-id");
+                            scrollToID('#' + sectionID, 750);
+                        });
+                        // scroll to top action
+                        $('.scroll-top').on('click', function (event) {
+                            event.preventDefault();
+                            $('html, body').animate({ scrollTop: 0 }, 'slow');
+                        });
+                        // mobile nav toggle
+                        $('#nav-toggle').on('click', function (event) {
+                            event.preventDefault();
+                            $('#main-nav').toggleClass("open");
+                        });
+                    });
+                    // scroll function
+                    function scrollToID(id, speed) {
+                        var offSet = 0;
+                        var targetOffset = $(id).offset().top - offSet;
+                        var mainNav = $('#main-nav');
+                        $('html,body').animate({ scrollTop: targetOffset }, speed);
+                        if (mainNav.hasClass("open")) {
+                            mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+                            mainNav.removeClass("open");
+                        }
+                    }
+                    if (typeof console === "undefined") {
+                        console = {
+                            log: function () { }
+                        };
+                    }
+
+                </script>
+</body>
+</html>

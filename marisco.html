@@ -1,0 +1,580 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>FestMakers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="imagens/festmakerslogontext.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/fontAwesome.css">
+    <link rel="stylesheet" href="css/hero-slider.css">
+    <link rel="stylesheet" href="css/owl-carousel.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link href="css/global.css" rel="stylesheet" />
+
+    <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css'>
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Spectral:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <style>
+
+        .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+            background-color: transparent;
+        }
+
+        .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+            background-color: transparent;
+        }
+
+        .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .active > a {
+            background-image: none;
+            background-color: transparent;
+        }
+
+        body {
+            font-family: 'Spectral', serif !important;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            transition: background 0.5s ease;
+        }
+
+        .container1:hover .overlay {
+            display: block;
+            background: rgba(0, 0, 0, .3);
+        }
+
+        img {
+            position: absolute;
+            width: 500px;
+            height: 300px;
+            left: 0;
+        }
+
+
+        .button {
+            position: absolute;
+            width: 500px;
+            left: 0;
+            top: 180px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity .35s ease;
+        }
+
+            .button a {
+                width: 200px;
+                padding: 12px 48px;
+                text-align: center;
+                color: white;
+                border: solid 2px white;
+                z-index: 1;
+            }
+
+
+        body {
+            font-family: 'Spectral', serif !important;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            transition: background 0.5s ease;
+        }
+
+        .container1:hover .overlay {
+            display: block;
+            background: rgba(0, 0, 0, .3);
+        }
+
+        img {
+            position: absolute;
+            width: 500px;
+            height: 300px;
+            left: 0;
+        }
+
+
+        .button {
+            position: absolute;
+            width: 500px;
+            left: 0;
+            top: 180px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity .35s ease;
+        }
+
+            .button a {
+                width: 200px;
+                padding: 12px 48px;
+                text-align: center;
+                color: white;
+                border: solid 2px white;
+                z-index: 1;
+            }
+
+
+        body {
+            font-family: 'Spectral', serif !important;
+        }
+
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+
+        body {
+            margin-bottom: 60px;
+            font-family: 'Khand', sans-serif;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            background-color: #f5f5f5;
+        }
+
+        footer p {
+            margin: 20px 0;
+        }
+
+        .footer > .container {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        /* -- -- */
+        h3 {
+            display: inline-block;
+            font-size: 32px;
+            line-height: 36px;
+            position: relative;
+            margin-top: 28px;
+            margin-bottom: 15px;
+        }
+
+            h3:before {
+                left: -40px;
+                height: 0;
+                height: 1px;
+            }
+
+            h3:before, h3:after {
+                content: "";
+                position: absolute;
+                bottom: 18px;
+                height: 1px;
+                width: 40px;
+                margin: 0 -15px;
+                background-color: #533834;
+            }
+
+            h3:after {
+                right: -40px;
+            }
+
+        h5 {
+            font-size: 16px;
+            line-height: 22px;
+            margin: 0 0 15px;
+            font-weight: 400;
+        }
+
+        .item {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+            .item h4, .item p {
+                display: block;
+                clear: both;
+                color: #533834;
+            }
+
+            .item p {
+                clear: both;
+                color: #938372;
+                margin-left: 5px;
+            }
+
+            .item span:first-of-type {
+                background-image: linear-gradient(to right,rgba(56,47,47,.5) 33%,rgba(0,0,0,0) 0%);
+                background-position: bottom;
+                background-size: 3px 1px;
+                background-repeat: repeat-x;
+                height: 1px;
+                width: 100%;
+                position: absolute;
+                top: 22px;
+            }
+        /* Dots in IE */
+        @media screen and (-ms-high-contrast:active), (-ms-high-contrast:none) {
+            .dots {
+                background: transparent url('/img/dot.gif') repeat-x bottom left;
+            }
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0 10px;
+            background: #d2c82a;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 26px;
+            color: #fff;
+            text-align: center;
+            vertical-align: middle;
+            text-transform: uppercase;
+            border: 1px solid rgba(0,0,0,.05);
+            letter-spacing: 1px;
+            border-radius: 3px;
+            margin: -2px 5px 0 0;
+        }
+
+        .note {
+            padding: 0 5px 0 7px;
+            min-width: 23px;
+            background: rgba(0,0,0,0);
+            border: 1px solid #382f2f;
+            color: #382f2f;
+            box-sizing: border-box;
+            border-radius: 12px;
+            line-height: 21px;
+        }
+
+        .veggie {
+            color: #82b440;
+            border-color: #82b440;
+        }
+
+        .spicy {
+            color: #ec4e00;
+            border-color: #ec4e00;
+        }
+
+        .item span:nth-of-type(2n) {
+            position: absolute;
+            font-size: 22px;
+            font-weight: 400;
+            right: 0;
+            padding-left: 8px;
+            background-color: #fff;
+            z-index: 0;
+        }
+
+        .item h4 {
+            display: inline-block;
+            padding-right: 8px;
+            font-size: 1.25rem;
+            max-width: 80%;
+            text-transform: capitalize;
+            margin-bottom: 4px;
+            position: relative;
+        }
+
+        li {
+            display: block;
+            transition-duration: 0.5s;
+        }
+
+            li:hover {
+                cursor: pointer;
+            }
+
+        ul li ul {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            transition: all 0.5s ease;
+            margin-top: 1rem;
+            left: 0;
+            display: none;
+        }
+
+            ul li:hover > ul,
+            ul li ul:hover {
+                visibility: visible;
+                opacity: 1;
+                display: block;
+            }
+
+            ul li ul li {
+                clear: both;
+                width: 100%;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <a href="#" class="navbar-brand scroll-top">FestMakers</a>
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!--/.navbar-header-->
+                <div id="main-nav" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Covid.html">COVID-19</a></li>
+                        <li>
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="">Menus <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="mediterranea.html">Ementa Mediterrânea</a></li>
+                                <li><a href="marisco.html">Ementa Marisco</a></li>
+                                <li><a href="transmontana.html">Ementa Transmonstana</a></li>
+                                <li><a href="casamento.html">Ementa de Casamento</a></li>
+                                <li><a href="coffeebrake.html">Ementa Coffee Break</a></li>
+                                <!--- Put your menu-item here -->
+                            </ul>
+                        </li>
+                        <li><a href="contact.html">Contactos</a></li>
+                        <li><a href="about.html">Sobre nós</a></li>
+                        <li><a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a></li>
+                    </ul>
+                </div>
+                <!--/.navbar-collapse-->
+            </nav>
+            <!--/.navbar-->
+        </div>
+        <!--/.container-->
+    </div>
+    <!--/.header-->
+    <!-- The Modal -->
+
+    <div class="container-fluid">
+        <div id="id01" class="modal">
+
+            <form class="modal-content animate" action="locationcheck.html">
+                <div class="imgcontainer" style="margin-bottom:40px">
+                    <h2>Login</h2>
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+
+
+                <div class="col" style="margin-bottom:30px">
+                    <a href="#" class="fb btn">
+                        <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+                    </a>
+                    <br />
+                    <br />
+                    <a href="#" class="google btn">
+                        <i class="fa fa-google fa-fw"></i> Login with Google
+                    </a>
+                </div>
+
+                <div style="margin-left:70px; margin-bottom:30px">
+                    <label for="uname" style="margin-right:25px"><b>Email:</b></label>
+                    <input type="text" placeholder="Insira o seu email..." name="uname" required>
+                    <br />
+                    <label for="psw" style="margin-right:5px"><b>Password:</b></label>
+                    <input type="password" placeholder="Insira a sua palavra-passe..." name="psw" required>
+                    <br />
+                    <br />
+                    <div>
+                        <button type="submit" style="display: inline-block; background-color: #a9957b; color: #fff; font-size: 13px; text-transform: uppercase;
+          font-weight: 500; padding: 12px 20px; border-radius: 3px; text-decoration: none; letter-spacing: 0.5px; width:25%; margin-left:27%">
+                            Login
+                        </button>
+                    </div>
+
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- end of login-->
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 style="text-align:center; margin-bottom:50px" class="my-3">Ementa Marisco</h1>
+                <p style="text-align:center">
+                    A Ementa de Marisco é a melhor escolha para um evento prolongado, oferecendo aperítivos, entradas, prato principal,
+                    sobremesa e bebidas para o acompanhar durante o dia.
+                </p>
+                <div class="text-center">
+                    <a id="4"></a><h3 style="margin-bottom:50px">ENTRADAS</h3>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="item">
+                            <h4>Amêijoas à Bulhão Pato</h4>
+                            <span></span>
+                            <p>Ameijoas com molho de vinho alho e cebola.</p>
+                        </div>
+                        <div class="item">
+                            <h4>Camarão com laranja</h4>
+                            <span></span>
+
+                            <p>Camarão com laranja, alho e azeite.</p>
+                        </div>
+                        <div class="item">
+                            <h4>Mexilhão apimentado</h4>
+                            <span></span>
+
+                            <p>Mexilhão com molho picante de azeite manteiga e alho.</p>
+                        </div>
+                        <div class="item">
+                            <h4>Húmos de beterraba</h4>
+                            <span></span>
+                            <div class="note badge spicy" data-toggle="tooltip" data-placement="right" title="Spicy">s</div>
+                            <p>Pasta de grão, beterraba e vinagre balsâmico.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="item">
+                            <h4>Espetadas de lulas e camarão</h4>
+                            <span></span>
+                            <p>Espetadas de lulas com tomate, pimento, camarão e abacaxi.</p>
+                        </div>
+                        <div class="item">
+                            <h4>Espetadas de camarão e amendoim</h4>
+                            <span></span>
+                            <div class="note badge spicy" data-toggle="tooltip" data-placement="right" title="Spicy">s</div>
+                            <p>Espetadas de camarão cobertas com molho de amendoim, malagueta e alho.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a id="7"></a><h3 style=" margin-bottom:50px; margin-top:60px">PRATOS PRINCIPAIS</h3>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="item">
+                            <h4>Combinado de marisco clássico</h4>
+                            <span></span>
+                            <p><i>Sapateira recheada, gambas e mexilhão com vinagrete.</i></p>
+                        </div>
+                        <div class="item">
+                            <h4>Combinado de marisco grande </h4>
+                            <span></span>
+                            <p><i>Sapateira recheada, gambas, mexilhão com vinagrete, ostras e percebes.</i></p>
+                        </div>
+                        <div class="item">
+                            <h4>Lavagante grelhado</h4>
+                            <span></span>
+                            <p>Lavagante grelhado com batata cozida.</p>
+                        </div>
+
+                        <div class="item">
+                            <h4>Mexilhão ao vinagrete</h4>
+                            <span></span>
+                            <p>Mexilhões com limao, alho, cebola e pimento.</p>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="item">
+                            <h4>Arroz de marisco</h4>
+                            <span></span>
+                            <p>Arroz com mistura de marisco.</p>
+                        </div>
+                        <div class="item">
+                            <h4>Salada de Búzios</h4>
+                            <span></span>
+                            <p>Búzios com cebola, alho, ovo cozido e azeitonas.</p>
+                        </div>
+                        <div class="item">
+                            <h4>Salada de Lavagante</h4>
+                            <span></span>
+                            <p>Lagosta com vegetais salteados.</p>
+                        </div>
+                        <div class="item">
+                            <h4>Camarão tigre</h4>
+                            <span></span>
+                            <p>Camarão tigre com limão.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a id="9"></a><h3 style=" margin-bottom:50px; margin-top:60px">SOBREMESAS</h3>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="item">
+                            <h4>Sorvete de nozes borges</h4>
+                            <span></span>
+                        </div>
+                        <div class="item">
+                            <h4>Waffles com gelado de baunilha</h4>
+                            <span></span>
+
+                        </div>
+                        <div class="item">
+                            <h4>Bolo de cenoura</h4>
+                            <span></span>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6" style="margin-bottom:100px">
+                        <div class="item">
+                            <h4>Tiramisu de copo</h4>
+                            <span></span>
+                        </div>
+                        <div class="item">
+                            <h4>Salada de fruta</h4>
+                            <span></span>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer style="background-color: #a9957b;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Copyright &copy; 2021 FestMakers</p>
+                </div>
+
+                <div class="col-md-8" style="text-align:right">
+                    <p>Projeto MAS 2021 G301</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+</body>
+</html>

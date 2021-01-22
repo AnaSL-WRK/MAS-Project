@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -23,7 +23,316 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
- 
+    <style>
+
+        .btn {
+            background-color: #a9957b;
+            margin:50px;
+
+        }
+        .container {
+            width: 100% !important;
+        }
+
+        .topleft {
+            top: 7%;
+            left: 18%;
+        }
+
+        .topright {
+            top: 7%;
+            left: 60%;
+        }
+
+        .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+            background-color: transparent;
+        }
+
+        .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+            background-color: transparent;
+        }
+
+        .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .active > a {
+            background-image: none;
+            background-color: transparent;
+        }
+
+        body {
+            font-family: 'Spectral', serif !important;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            transition: background 0.5s ease;
+        }
+
+        .container1:hover .overlay {
+            display: block;
+            background: rgba(0, 0, 0, .3);
+        }
+
+        img {
+            position: absolute;
+            width: 500px;
+            height: 300px;
+            left: 0;
+        }
+
+
+        .button {
+            position: absolute;
+            width: 500px;
+            left: 0;
+            top: 180px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity .35s ease;
+        }
+
+            .button a {
+                width: 200px;
+                padding: 12px 48px;
+                text-align: center;
+                color: white;
+                border: solid 2px white;
+                z-index: 1;
+            }
+
+        .container1:hover .button {
+            opacity: 1;
+        }
+
+        li {
+            display: block;
+            transition-duration: 0.5s;
+        }
+
+            li:hover {
+                cursor: pointer;
+            }
+
+        ul li ul {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            transition: all 0.5s ease;
+            margin-top: 1rem;
+            left: 0;
+            display: none;
+        }
+
+            ul li:hover > ul,
+            ul li ul:hover {
+                visibility: visible;
+                opacity: 1;
+                display: block;
+            }
+
+            ul li ul li {
+                clear: both;
+                width: 100%;
+            }
+
+        body {
+            margin-bottom: 60px;
+            font-family: 'Khand', sans-serif;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            background-color: #f5f5f5;
+        }
+
+        footer p {
+            margin: 20px 0;
+        }
+
+        .footer > .container {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        /* -- -- */
+        h3 {
+            display: inline-block;
+            font-size: 32px;
+            line-height: 36px;
+            position: relative;
+            margin-top: 28px;
+            margin-bottom: 15px;
+        }
+
+            h3:before {
+                left: -40px;
+                height: 0;
+                height: 1px;
+            }
+
+            h3:before, h3:after {
+                content: "";
+                position: absolute;
+                bottom: 18px;
+                height: 1px;
+                width: 40px;
+                margin: 0 -15px;
+                background-color: #533834;
+            }
+
+            h3:after {
+                right: -40px;
+            }
+
+        h5 {
+            font-size: 16px;
+            line-height: 22px;
+            margin: 0 0 15px;
+            font-weight: 400;
+        }
+
+        .item {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+            .item h4, .item p {
+                display: block;
+                clear: both;
+                color: #533834;
+            }
+
+            .item p {
+                clear: both;
+                color: #938372;
+                margin-left: 5px;
+            }
+
+            .item span:first-of-type {
+                background-image: linear-gradient(to right,rgba(56,47,47,.5) 33%,rgba(0,0,0,0) 0%);
+                background-position: bottom;
+                background-size: 3px 1px;
+                background-repeat: repeat-x;
+                height: 1px;
+                width: 100%;
+                position: absolute;
+                top: 22px;
+            }
+        /* Dots in IE */
+        @media screen and (-ms-high-contrast:active), (-ms-high-contrast:none) {
+            .dots {
+                background: transparent url('/img/dot.gif') repeat-x bottom left;
+            }
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0 10px;
+            background: #d2c82a;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 26px;
+            color: #fff;
+            text-align: center;
+            vertical-align: middle;
+            text-transform: uppercase;
+            border: 1px solid rgba(0,0,0,.05);
+            letter-spacing: 1px;
+            border-radius: 3px;
+            margin: -2px 5px 0 0;
+        }
+
+        .note {
+            padding: 0 5px 0 7px;
+            min-width: 23px;
+            background: rgba(0,0,0,0);
+            border: 1px solid #382f2f;
+            color: #382f2f;
+            box-sizing: border-box;
+            border-radius: 12px;
+            line-height: 21px;
+        }
+
+        .veggie {
+            color: #82b440;
+            border-color: #82b440;
+        }
+
+        .spicy {
+            color: #ec4e00;
+            border-color: #ec4e00;
+        }
+
+        .item span:nth-of-type(2n) {
+            position: absolute;
+            font-size: 22px;
+            font-weight: 400;
+            right: 0;
+            padding-left: 8px;
+            background-color: #fff;
+            z-index: 0;
+        }
+
+        .item h4 {
+            display: inline-block;
+            padding-right: 8px;
+            font-size: 1.25rem;
+            max-width: 80%;
+            text-transform: capitalize;
+            margin-bottom: 4px;
+            position: relative;
+        }
+
+        li {
+            display: block;
+            transition-duration: 0.5s;
+        }
+
+            li:hover {
+                cursor: pointer;
+            }
+
+        ul li ul {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            transition: all 0.5s ease;
+            margin-top: 1rem;
+            left: 0;
+            display: none;
+        }
+
+            ul li:hover > ul,
+            ul li ul:hover {
+                visibility: visible;
+                opacity: 1;
+                display: block;
+            }
+
+            ul li ul li {
+                clear: both;
+                width: 100%;
+            }
+
+        .button-comprar a {
+            display: inline-block;
+            background-color: #a9957b;
+            color: #fff;
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: 500;
+            padding: 12px 20px;
+            border-radius: 3px;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+    </style>
 </head>
 
 <body style="background-color:#fefefa">
@@ -82,7 +391,9 @@
 
     
     <div class="products-container" style="background-color:#fefefa">
-
+        <button class=" btn button-comprar" onclick="window.location.href='User o seu Evento Custom.html'">
+            Escolher ementa
+        </button>
         <div class="product-header">
             <h5 class="product-title">Pratos Escolhidos</h5>
             <h5 class="price">Preço</h5>
